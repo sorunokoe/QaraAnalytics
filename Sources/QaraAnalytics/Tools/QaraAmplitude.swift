@@ -16,8 +16,10 @@ public class QaraAmplitude: QaraAnalyticsTool {
     }
     
     public func track(event: AnalyticsEvent) {
+        #if RELEASE
         let event = BaseEvent(eventType: event.name, eventProperties: event.properties)
         amplitude.track(event: event)
+        #endif
     }
     
 }
