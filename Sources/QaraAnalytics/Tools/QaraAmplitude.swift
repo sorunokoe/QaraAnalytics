@@ -9,7 +9,7 @@ import AmplitudeSwift
 
 public class QaraAmplitude: QaraAnalyticsTool {
     
-    private let amplitude: Amplitude
+    public let amplitude: Amplitude
     
     public init(apiKey: String) {
         self.amplitude = Amplitude(configuration: Configuration(apiKey: apiKey))
